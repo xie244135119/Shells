@@ -18,6 +18,10 @@ build_config="Debug"
 # warning 这块可变更为自己的
 #API调用方身份
 _api_key=""
+if [[ $_api_key == "" ]]; then
+    echo "请配置蒲公英账号的ApiKey"
+    exit
+fi
 
 #获取参数中的Target
 param_pattern=":p:nc:ws:"
